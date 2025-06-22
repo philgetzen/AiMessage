@@ -1,7 +1,7 @@
 import Foundation
 
 struct Message: Identifiable, Codable {
-    let id = UUID()
+    let id: UUID
     let timestamp: Date
     let text: String
     let sender: String
@@ -9,6 +9,7 @@ struct Message: Identifiable, Codable {
     let chatIdentifier: String
     
     init(timestamp: Date, text: String, sender: String, isFromMe: Bool, chatIdentifier: String) {
+        self.id = UUID()
         self.timestamp = timestamp
         self.text = text
         self.sender = sender
@@ -27,6 +28,7 @@ struct Message: Identifiable, Codable {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         guard let parsedDate = formatter.date(from: timestampString) else { return nil }
         
+        self.id = UUID()
         self.timestamp = parsedDate
         self.text = components[1].trimmingCharacters(in: .whitespacesAndNewlines)
         self.sender = components[2].trimmingCharacters(in: .whitespacesAndNewlines)

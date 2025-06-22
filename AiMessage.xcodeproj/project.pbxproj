@@ -3,18 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1D1AA1A12B3C5E1F000A1A1A /* AiMessageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AA1A02B3C5E1F000A1A1A /* AiMessageApp.swift */; };
 		1D1AA1A32B3C5E1F000A1A1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AA1A22B3C5E1F000A1A1A /* ContentView.swift */; };
 		1D1AA1A52B3C5E20000A1A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1AA1A42B3C5E20000A1A1A /* Assets.xcassets */; };
+		1D1AA1A82B3C5E20000A1A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1AA1A72B3C5E20000A1A1A /* Preview Assets.xcassets */; };
 		1D1AA1B12B3C5F1F000A1A1A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AA1B02B3C5F1F000A1A1A /* Message.swift */; };
 		1D1AA1B32B3C5F2F000A1A1A /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AA1B22B3C5F2F000A1A1A /* FileImporter.swift */; };
 		1D1AA1B62B3C6F1F000A1A1A /* export_all_messages.sh in Resources */ = {isa = PBXBuildFile; fileRef = 1D1AA1B72B3C6F1F000A1A1A /* export_all_messages.sh */; };
 		1D1AA1B82B3C6F2F000A1A1A /* export_contact_messages.sh in Resources */ = {isa = PBXBuildFile; fileRef = 1D1AA1B92B3C6F2F000A1A1A /* export_contact_messages.sh */; };
-		1D1AA1A82B3C5E20000A1A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1AA1A72B3C5E20000A1A1A /* Preview Assets.xcassets */; };
+		8B2BE9392E079973000C3472 /* AiMessageDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2BE9382E079973000C3472 /* AiMessageDocument.swift */; };
+		8B2BE9422E0799DB000C3472 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B2BE9412E0799DB000C3472 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,13 @@
 		1D1AA1B22B3C5F2F000A1A1A /* FileImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileImporter.swift; sourceTree = "<group>"; };
 		1D1AA1B72B3C6F1F000A1A1A /* export_all_messages.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = export_all_messages.sh; path = ../export_scripts/export_all_messages.sh; sourceTree = "<group>"; };
 		1D1AA1B92B3C6F2F000A1A1A /* export_contact_messages.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = export_contact_messages.sh; path = ../export_scripts/export_contact_messages.sh; sourceTree = "<group>"; };
+		8B2BE9382E079973000C3472 /* AiMessageDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiMessageDocument.swift; sourceTree = "<group>"; };
+		8B2BE9412E0799DB000C3472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8B2BE93D2E0799B2000C3472 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1D1AA19A2B3C5E1F000A1A1A /* Frameworks */ = {
@@ -60,6 +68,8 @@
 		1D1AA19F2B3C5E1F000A1A1A /* AiMessage */ = {
 			isa = PBXGroup;
 			children = (
+				8B2BE9412E0799DB000C3472 /* Info.plist */,
+				8B2BE93D2E0799B2000C3472 /* Views */,
 				1D1AA1A02B3C5E1F000A1A1A /* AiMessageApp.swift */,
 				1D1AA1A22B3C5E1F000A1A1A /* ContentView.swift */,
 				1D1AA1B42B3C5F3F000A1A1A /* Models */,
@@ -72,9 +82,18 @@
 			path = AiMessage;
 			sourceTree = "<group>";
 		};
+		1D1AA1A62B3C5E20000A1A1A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1D1AA1A72B3C5E20000A1A1A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		1D1AA1B42B3C5F3F000A1A1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8B2BE9382E079973000C3472 /* AiMessageDocument.swift */,
 				1D1AA1B02B3C5F1F000A1A1A /* Message.swift */,
 			);
 			path = Models;
@@ -97,14 +116,6 @@
 			name = "Export Scripts";
 			sourceTree = "<group>";
 		};
-		1D1AA1A62B3C5E20000A1A1A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1D1AA1A72B3C5E20000A1A1A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +130,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8B2BE93D2E0799B2000C3472 /* Views */,
 			);
 			name = AiMessage;
 			productName = AiMessage;
@@ -164,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1AA1A82B3C5E20000A1A1A /* Preview Assets.xcassets in Resources */,
+				8B2BE9422E0799DB000C3472 /* Info.plist in Resources */,
 				1D1AA1A52B3C5E20000A1A1A /* Assets.xcassets in Resources */,
 				1D1AA1B62B3C6F1F000A1A1A /* export_all_messages.sh in Resources */,
 				1D1AA1B82B3C6F2F000A1A1A /* export_contact_messages.sh in Resources */,
@@ -181,6 +196,7 @@
 				1D1AA1A12B3C5E1F000A1A1A /* AiMessageApp.swift in Sources */,
 				1D1AA1B12B3C5F1F000A1A1A /* Message.swift in Sources */,
 				1D1AA1B32B3C5F2F000A1A1A /* FileImporter.swift in Sources */,
+				8B2BE9392E079973000C3472 /* AiMessageDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

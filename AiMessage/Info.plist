@@ -2,103 +2,67 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
-	<key>CFBundlePackageType</key>
-	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2024. All rights reserved.</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	<key>CFBundleDisplayName</key>
+	<string>AiMessage</string>
+	<key>NSApplicationName</key>
+	<string>AiMessage</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(MARKETING_VERSION)</string>
+	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<string>1</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSMainStoryboardFile</key>
+	<string>Main</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
-	
-	<!-- Exported Type Declarations for .aimessage files -->
-	<key>UTExportedTypeDeclarations</key>
-	<array>
-		<dict>
-			<key>UTTypeConformsTo</key>
-			<array>
-				<string>public.data</string>
-				<string>public.content</string>
-			</array>
-			<key>UTTypeDescription</key>
-			<string>AiMessage Export File</string>
-			<key>UTTypeIdentifier</key>
-			<string>com.aimessage.document</string>
-			<key>UTTypeTagSpecification</key>
-			<dict>
-				<key>public.filename-extension</key>
-				<array>
-					<string>aimessage</string>
-				</array>
-				<key>public.mime-type</key>
-				<array>
-					<string>application/x-aimessage</string>
-				</array>
-			</dict>
-		</dict>
-	</array>
-	
-	<!-- Document Types - Associate app with .aimessage files -->
+	<string>14.0</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
+	<key>NSSupportsAutomaticTermination</key>
+	<false/>
+	<key>NSSupportsSuddenTermination</key>
+	<false/>
+	<key>NSRequiresAquaSystemAppearance</key>
+	<false/>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeName</key>
-			<string>AiMessage Export File</string>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>LSHandlerRank</key>
-			<string>Owner</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>com.aimessage.document</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeName</key>
-			<string>Comma Separated Values</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
-			<key>LSHandlerRank</key>
-			<string>Alternate</string>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>csv</string>
+			</array>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.comma-separated-values-text</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>CSV Document</string>
 		</dict>
 		<dict>
-			<key>CFBundleTypeName</key>
-			<string>JSON Document</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
-			<key>LSHandlerRank</key>
-			<string>Alternate</string>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>json</string>
+			</array>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.json</string>
 			</array>
-		</dict>
-		<dict>
 			<key>CFBundleTypeName</key>
-			<string>SQLite Database</string>
-			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
-			<key>LSHandlerRank</key>
-			<string>Alternate</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>public.database</string>
-			</array>
+			<string>JSON Document</string>
 		</dict>
 	</array>
+	<key>NSPrivacyCollectionPolicy</key>
+	<string>AiMessage is completely private. All message analysis happens locally on your Mac using Apple's on-device AI. Your messages never leave your computer, and we don't collect any data or analytics.</string>
 </dict>
 </plist>

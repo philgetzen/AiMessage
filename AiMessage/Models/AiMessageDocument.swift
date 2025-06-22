@@ -84,7 +84,8 @@ class AiMessageDocument: NSDocument, ObservableObject {
         case "public.json":
             importJSONFile(at: url)
         case "public.database":
-            fileImporter.importFromDatabase(url)
+            // Database import not supported - show error
+            showDatabaseError()
         default:
             // Try to detect format automatically
             detectAndImportAiMessageFile(at: url)
@@ -108,8 +109,8 @@ class AiMessageDocument: NSDocument, ObservableObject {
                 fileImporter.importMessages(from: url)
             }
         } catch {
-            // If we can't read as text, might be a database
-            fileImporter.importFromDatabase(url)
+            // If we can't read as text, show error
+            showDatabaseError()
         }
     }
     
@@ -182,6 +183,12 @@ class AiMessageDocument: NSDocument, ObservableObject {
         }
         
         return messages.sorted { $0.timestamp < $1.timestamp }
+    }
+    
+    private func showDatabaseError() {
+        DispatchQueue.main.async {
+            self.fileImporter.importStatus = .error("Direct database import is not supported. Please use Terminal export method instead.")
+        }
     }
 }
 

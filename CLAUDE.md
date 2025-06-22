@@ -8,6 +8,12 @@ AiMessage is a macOS application for analyzing iMessage data using local AI proc
 
 **Key Privacy Principle**: All data processing happens locally on-device. No data is sent to external services.
 
+## Git Repository
+
+**Repository**: https://github.com/philgetzen/AiMessage (private)
+- Initialized with all project files
+- Ready for collaborative development
+
 ## Development Commands
 
 ### Building and Running
@@ -32,67 +38,73 @@ AiMessage/
 │   ├── ContentView.swift       # Main UI with tab navigation
 │   ├── Assets.xcassets/        # App icons and colors
 │   ├── AiMessage.entitlements  # Sandbox permissions
+│   ├── Models/                 # Data models
+│   │   ├── Message.swift       # Core message structure
+│   │   └── AiMessageDocument.swift # Document handling
+│   ├── Services/               # Business logic
+│   │   └── FileImporter.swift  # File import handling
+│   ├── Views/                  # UI components
+│   │   ├── DropZoneView.swift  # File drop interface
+│   │   └── ExportInstructionsView.swift # Help content
 │   └── Preview Content/        # SwiftUI preview assets
+├── export_scripts/             # User data export tools
+│   ├── export_all_messages.sh
+│   ├── export_contact_messages.sh
+│   └── chat_db_to_csv.sh
+├── sample_data/                # Example data formats
 ├── CLAUDE.md                   # This file
-└── README.md                   # Project documentation
+├── README.md                   # Project documentation
+├── SECURE_IMESSAGE_EXPORT.md   # Export guide
+└── Package.swift               # Swift package (dual structure)
 ```
 
 ## Architecture Overview
 
 ### Current Implementation
-The project is currently a minimal SwiftUI macOS app with three main tabs:
-1. **Import Tab**: File import interface (placeholder)
-2. **Analysis Tab**: AI processing display (placeholder)  
-3. **Statistics Tab**: Results and charts (placeholder)
+The project uses a simplified, user-friendly approach:
+1. **Import Tab**: Two-step Terminal export → CSV import flow
+2. **Analysis Tab**: AI processing display (placeholder ready for implementation)
+3. **Insights Tab**: Statistical overview and participant breakdown (implemented)
 
-### Planned Architecture
+### Implemented Components
 
-**Models Layer** (to be added)
-- `Message.swift` - Core message data structure
-- `AnalysisResult.swift` - AI analysis results and insights
+**Models Layer** ✅
+- `Message.swift` - Core message data structure with privacy-safe fields
+- `AiMessageDocument.swift` - Document-based app support
 
-**Services Layer** (to be added)
-- `FileImporter.swift` - JSON/CSV parsing with multiple format support
-- `LLMService.swift` - Apple Foundation Models integration
-- `AnalyticsEngine.swift` - Analysis pipeline orchestration
+**Services Layer** ✅ (simplified)
+- `FileImporter.swift` - CSV parsing only (removed unreliable database import)
+- LLM integration - planned for Apple Foundation Models
 
-**Views Layer** (expand current)
-- `FileInputView.swift` - Drag & drop file import with validation
-- `AnalysisView.swift` - AI processing progress and results display
-- `StatsView.swift` - Charts and statistics dashboard
+**Views Layer** ✅ (simplified)
+- `ImportView.swift` - Two-step export/import flow with clear guidance
+- `ExportInstructionsView.swift` - User guidance for data export
+- `AnalysisView.swift` - Placeholder for AI analysis
+- `InsightsView.swift` - Statistical overview and visualizations
 
 ## Development Next Steps
 
-### Immediate Tasks
-1. **Add file import functionality**
-   - Implement drag & drop support
-   - Add file picker dialog
-   - Support JSON and CSV formats
+### Priority Tasks
+1. **Complete analysis pipeline**
+   - Integrate Apple Foundation Models framework
+   - Implement local sentiment analysis and topic extraction
+   - Add message processing workflow with progress reporting
 
-2. **Create data models**
-   - Message structure with privacy-safe fields
-   - Analysis result models
-   - Conversation insights structure
+2. **Build visualization dashboard**
+   - Implement Swift Charts for statistics display
+   - Create interactive data views
+   - Add export capabilities for analysis results
 
-3. **Integrate Apple Foundation Models**
-   - Add Foundation Models framework
-   - Implement local sentiment analysis
-   - Add topic extraction capabilities
+3. **Enhance analysis capabilities**
+   - Focus on Apple Foundation Models integration
+   - Build out the analysis pipeline
+   - Create meaningful visualizations from analyzed data
 
-4. **Build analysis pipeline**
-   - Message processing workflow
-   - Progress reporting
-   - Result aggregation
-
-5. **Add visualization**
-   - Swift Charts integration
-   - Statistics dashboard
-   - Export capabilities
-
-### File Format Support (Planned)
-- **JSON**: Direct `Message` array or wrapper with metadata
-- **CSV**: Flexible column mapping (text/message, sender/from, timestamp/date)
-- **Timestamp parsing**: Multiple formats including ISO8601, Unix timestamps
+### File Format Support
+- **CSV**: ✅ Implemented with flexible column mapping
+  - Supports text/message, sender/from, timestamp/date columns
+  - Handles various timestamp formats including ISO8601, Unix timestamps
+- **JSON**: 🔲 Planned - Direct `Message` array or wrapper with metadata
 
 ## Technical Decisions
 
@@ -108,14 +120,15 @@ The project is currently a minimal SwiftUI macOS app with three main tabs:
 - Hidden title bar for modern appearance
 - Minimum window size: 800x600
 
-### Export Documentation & Security
+### Data Export System ✅
 
-### User Export Guides
-- **SECURE_IMESSAGE_EXPORT.md** - Comprehensive manual for exporting iMessage data using native macOS tools only
-- **export_scripts/** - Automated shell scripts for common export scenarios  
-- **sample_data/** - Example CSV files showing expected data format
+**Complete export documentation and tooling for secure iMessage data extraction:**
 
-### Export Script Usage
+- **SECURE_IMESSAGE_EXPORT.md** - Comprehensive manual using native macOS tools only
+- **export_scripts/** - Automated shell scripts for common scenarios
+- **sample_data/** - Example CSV files showing expected formats
+
+#### Export Script Usage
 ```bash
 # Make scripts executable (first time only)
 chmod +x export_scripts/*.sh
@@ -125,15 +138,18 @@ chmod +x export_scripts/*.sh
 
 # Export messages with specific contact
 ./export_scripts/export_contact_messages.sh
+
+# Direct database conversion
+./export_scripts/chat_db_to_csv.sh
 ```
 
-### Security Principles for Export
+#### Security Principles for Export ✅
 - **Native tools only** - Uses macOS built-in SQLite3, no third-party software
 - **Local processing** - All data manipulation happens on user's machine
 - **Secure cleanup** - Scripts automatically remove temporary database copies
 - **Transparent operations** - All commands visible and auditable
 
-### Expected CSV Format
+#### Supported CSV Format ✅
 ```csv
 timestamp,text,sender,isFromMe,chatIdentifier
 "2024-06-19 14:30:15","Hello!","Me",true,"direct"
@@ -150,33 +166,45 @@ timestamp,text,sender,isFromMe,chatIdentifier
 
 ## Getting Started
 
-1. **Open the project**: `open AiMessage.xcodeproj`
-2. **Build and run**: The project should compile immediately
-3. **Start development**: Begin by implementing file import functionality
-4. **Add features**: Follow the planned architecture to add analysis capabilities
+1. **Clone repository**: `git clone https://github.com/philgetzen/AiMessage.git`
+2. **Open project**: `open AiMessage.xcodeproj`
+3. **Build and run**: The project compiles immediately with working file import
+4. **Test with sample data**: Use files in `sample_data/` directory
 
 ## Dependencies
 
-### System Frameworks
-- SwiftUI (UI framework)
-- Foundation (Core data structures)
-- UniformTypeIdentifiers (File type handling)
-- Foundation Models (Apple's local AI - to be added)
+### System Frameworks ✅
+- SwiftUI (UI framework) - implemented
+- Foundation (Core data structures) - implemented  
+- UniformTypeIdentifiers (File type handling) - implemented
+- SQLite3 (Data parsing) - implemented
+- Foundation Models (Apple's local AI) - to be added
 
 ### macOS Version Support
-- **Minimum**: macOS 14.0
+- **Minimum**: macOS 14.0 (verified working)
 - **Recommended**: macOS 15.0+ (for latest Foundation Models features)
+- **Current Development**: macOS 15.5
 
-## Common Development Patterns
+## Development Status Summary
 
-### Adding New Views
-1. Create SwiftUI view in appropriate group
-2. Follow existing naming conventions
-3. Use proper preview providers for development
-4. Integrate with tab navigation if needed
+### ✅ Completed
+- **Project setup**: Xcode project with proper structure and build configuration
+- **Git repository**: Private GitHub repo with all files committed
+- **File import system**: CSV parsing with drag & drop interface
+- **Data models**: Message structure with privacy-safe fields
+- **Export tooling**: Complete shell scripts and documentation for secure data extraction
+- **UI foundation**: Tab-based navigation with working import interface
 
-### Error Handling
-- Use proper Swift error handling with descriptive messages
-- Show user-friendly alerts for file import issues
-- Gracefully handle analysis failures
-- Provide actionable guidance in error messages
+### 🔲 Next Priorities
+- **Apple Foundation Models integration**: Local AI processing pipeline
+- **Analysis views**: Progress display and results presentation
+- **Statistics dashboard**: Charts and insights visualization
+- **JSON format support**: Additional file import capability
+
+### 📁 Key Files for Development
+- `AiMessage/Models/Message.swift` - Core data structure
+- `AiMessage/Services/FileImporter.swift` - Simplified CSV import logic
+- `AiMessage/Views/ImportView.swift` - Two-step import flow interface
+- `AiMessage/ContentView.swift` - Main app navigation with auto-advance
+
+The project is well-structured and ready for the next development phase focusing on AI analysis capabilities.
