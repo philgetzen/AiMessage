@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/master.swiftdeps"
+  },
+  "/Users/philgetzen/Development/AiMessage/Sources/AiMessageApp.swift": {
+    "dependencies": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp.d",
+    "object": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp.swift.o",
+    "swiftmodule": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp.swiftdeps"
+  },
+  "/Users/philgetzen/Development/AiMessage/Sources/ContentView.swift": {
+    "dependencies": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView.d",
+    "object": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView.swift.o",
+    "swiftmodule": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView.swiftdeps"
+  }
+}

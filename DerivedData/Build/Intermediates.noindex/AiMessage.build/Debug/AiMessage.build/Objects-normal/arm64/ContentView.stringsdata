@@ -1,0 +1,280 @@
+{
+  "source": "/Users/philgetzen/Development/AiMessage/AiMessage/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Messages",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "Analysis",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "Insights",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Export Your Messages",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "We need to copy your Messages database to a location where this app can access it.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "1",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open Finder Windows",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "Click the button below to open your Messages folder and Downloads folder",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "2",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy chat.db",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drag 'chat.db' from the Messages folder to your Downloads folder",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "3",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import Your Messages",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 121
+        }
+      },
+      {
+        "comment": "",
+        "key": "Click 'Import from Downloads' to load your messages",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 124
+        }
+      },
+      {
+        "comment": "",
+        "key": "Open Messages & Downloads Folders",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import from Downloads",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "I've copied chat.db to Downloads",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 152
+        }
+      },
+      {
+        "comment": "",
+        "key": "Dismiss",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 237
+        }
+      },
+      {
+        "comment": "",
+        "key": "Import Error",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 227
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld messages loaded and ready for analysis",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 281
+        }
+      },
+      {
+        "comment": "",
+        "key": "AI Analysis",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 276
+        }
+      },
+      {
+        "comment": "",
+        "key": "🚧 Analysis Coming Soon",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 288
+        }
+      },
+      {
+        "comment": "",
+        "key": "Apple Foundation Models integration is in development",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 293
+        }
+      },
+      {
+        "comment": "",
+        "key": "Message Preview",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 299
+        }
+      },
+      {
+        "comment": "",
+        "key": "... and %lld more messages",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 317
+        }
+      },
+      {
+        "comment": "",
+        "key": "📊 Advanced analytics coming soon",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 465
+        }
+      },
+      {
+        "comment": "",
+        "key": "Overview of your imported conversations",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 360
+        }
+      },
+      {
+        "comment": "",
+        "key": "Message Insights",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 355
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld days of conversation",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 431
+        }
+      },
+      {
+        "comment": "",
+        "key": "Conversation Timeline",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 402
+        }
+      },
+      {
+        "comment": "",
+        "key": "First Message",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 407
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last Message",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 422
+        }
+      },
+      {
+        "comment": "",
+        "key": "Participants",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 442
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld messages",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 456
+        }
+      }
+    ]
+  },
+  "version": 1
+}

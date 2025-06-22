@@ -1,0 +1,58 @@
+{
+  "" : {
+    "diagnostics" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessage-master.dia",
+    "emit-module-dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessage-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessage-master-emit-module.dia",
+    "swift-dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessage-master.swiftdeps"
+  },
+  "/Users/philgetzen/Development/AiMessage/AiMessage/AiMessageApp.swift" : {
+    "const-values" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp.swiftconstvalues",
+    "dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp.d",
+    "diagnostics" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp.dia",
+    "index-unit-output-path" : "/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp.o",
+    "llvm-bc" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp.bc",
+    "object" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp.o",
+    "swift-dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp.swiftdeps",
+    "swiftmodule" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/AiMessageApp~partial.swiftmodule"
+  },
+  "/Users/philgetzen/Development/AiMessage/AiMessage/ContentView.swift" : {
+    "const-values" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/philgetzen/Development/AiMessage/AiMessage/Models/Message.swift" : {
+    "const-values" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message.swiftconstvalues",
+    "dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message.d",
+    "diagnostics" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message.dia",
+    "index-unit-output-path" : "/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message.o",
+    "llvm-bc" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message.bc",
+    "object" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message.o",
+    "swift-dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message.swiftdeps",
+    "swiftmodule" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/Message~partial.swiftmodule"
+  },
+  "/Users/philgetzen/Development/AiMessage/AiMessage/Services/FileImporter.swift" : {
+    "const-values" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter.swiftconstvalues",
+    "dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter.d",
+    "diagnostics" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter.dia",
+    "index-unit-output-path" : "/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter.o",
+    "llvm-bc" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter.bc",
+    "object" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter.o",
+    "swift-dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter.swiftdeps",
+    "swiftmodule" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/FileImporter~partial.swiftmodule"
+  },
+  "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/philgetzen/Development/AiMessage/DerivedData/Build/Intermediates.noindex/AiMessage.build/Debug/AiMessage.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

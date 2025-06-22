@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "AiMessage-arm64-apple-macosx15.0-debug.exe": ["<AiMessage-arm64-apple-macosx15.0-debug.exe>"]
+  "AiMessage-arm64-apple-macosx15.0-debug.module": ["<AiMessage-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<AiMessage-arm64-apple-macosx15.0-debug.exe>","<AiMessage-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<AiMessage-arm64-apple-macosx15.0-debug.exe>","<AiMessage-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/philgetzen/Development/AiMessage/Sources/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage":
+    is-mutated: true
+commands:
+  "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage-entitlement.plist"]
+    description: "Write auxiliary file /Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage-entitlement.plist"
+
+  "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/philgetzen/Development/AiMessage/Sources/AiMessageApp.swift","/Users/philgetzen/Development/AiMessage/Sources/ContentView.swift"]
+    outputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/sources"]
+    description: "Write auxiliary file /Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/sources"
+
+  "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp.swift.o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView.swift.o"]
+    outputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.product/Objects.LinkFileList"
+
+  "/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<AiMessage-arm64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<AiMessage-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<AiMessage-arm64-apple-macosx15.0-debug.exe>"]
+
+  "<AiMessage-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp.swift.o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView.swift.o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/Modules/AiMessage.swiftmodule"]
+    outputs: ["<AiMessage-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.AiMessage-arm64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp.swift.o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView.swift.o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.product/Objects.LinkFileList"]
+    outputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/AiMessage"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug","-o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage","-module-name","AiMessage","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_AiMessage_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.product/Objects.LinkFileList","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/Modules/AiMessage.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.AiMessage-arm64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage-entitlement.plist"]
+    outputs: ["<AiMessage-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/AiMessage"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage-entitlement.plist","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage"]
+
+  "C.AiMessage-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/philgetzen/Development/AiMessage/Sources/AiMessageApp.swift","/Users/philgetzen/Development/AiMessage/Sources/ContentView.swift","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/sources"]
+    outputs: ["/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/AiMessageApp.swift.o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/ContentView.swift.o","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/Modules/AiMessage.swiftmodule"]
+    description: "Compiling Swift Module 'AiMessage' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AiMessage","-emit-dependencies","-emit-module","-emit-module-path","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/Modules/AiMessage.swiftmodule","-output-file-map","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/output-file-map.json","-incremental","-c","@/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/AiMessage.build/sources","-I","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-enable-batch-mode","-index-store-path","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/philgetzen/Development/AiMessage/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","AiMessage_main","-swift-version","5","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","aimessage"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/philgetzen/Development/AiMessage/Sources/","/Users/philgetzen/Development/AiMessage/Package.swift","/Users/philgetzen/Development/AiMessage/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
