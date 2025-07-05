@@ -1,8 +1,12 @@
 # AiMessage
 
+**🚧 WORK IN PROGRESS - NOT FUNCTIONAL YET 🚧**
+
 **100% Private Message Analysis for macOS**
 
-AiMessage analyzes your iMessage conversations using Apple's on-device AI, ensuring complete privacy. Your messages never leave your Mac.
+AiMessage will analyze your iMessage conversations using Apple's on-device AI, ensuring complete privacy. Your messages never leave your Mac.
+
+> **Note**: This project is currently under development. The core functionality is not yet implemented. Only the basic file import system is working.
 
 ## 🔒 Privacy First
 
@@ -11,18 +15,26 @@ AiMessage analyzes your iMessage conversations using Apple's on-device AI, ensur
 - **No Data Collection**: Zero analytics, tracking, or telemetry
 - **Open Source**: Full transparency in how your data is handled
 
-## ✨ Features
+## ✨ Planned Features
 
-- **Sentiment Analysis**: Understand the emotional tone of conversations
-- **Topic Detection**: Discover what you talk about most
-- **Conversation Insights**: See patterns in your messaging habits
-- **Beautiful Visualizations**: Clean, modern interface
+- **Sentiment Analysis**: Understand the emotional tone of conversations *(planned)*
+- **Topic Detection**: Discover what you talk about most *(planned)*
+- **Conversation Insights**: See patterns in your messaging habits *(planned)*
+- **Beautiful Visualizations**: Clean, modern interface *(planned)*
 
-## 🚀 Getting Started
+## 🔧 Current Status
 
+- ✅ **File Import**: CSV import via drag-and-drop works
+- ✅ **Export Scripts**: Terminal-based message export tools
+- ⏳ **AI Analysis**: Apple Foundation Models integration in progress
+- ⏳ **Visualizations**: Statistics dashboard under development
+
+## 🚀 Getting Started *(Development)*
+
+Currently, you can:
 1. **Export your messages** using the secure Terminal method (the app guides you)
 2. **Import the CSV file** via drag-and-drop
-3. **Analyze locally** using Apple's Foundation Models
+3. **View basic import statistics** (analysis features not yet implemented)
 
 ## 🛡️ Security
 
